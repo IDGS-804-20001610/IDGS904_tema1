@@ -1,0 +1,33 @@
+﻿@model IDGS904_tema1.Models.OperasBas
+
+@{
+    ViewBag.Title = "Calculator";
+}
+<h2>Calculator</h2>
+<div class="container">
+    <div class="row div col-lg-6">
+        <form action="/" method="POST">
+            <label for="n1">First Number:</label>
+            <input type="number" name="Num1" value="" />
+            <br />
+            <label for="n1">Second Number:</label>
+            <input type="number" name="Num2" value="" />
+            <br /><br />
+            <label>Select the operation you want to perform:</label><br />
+            <p>
+                Add:   @Html.RadioButton("Ope", "1")
+                Minus: @Html.RadioButton("Ope", "2")
+                Multiply:   @Html.RadioButton("Ope", "3")
+                Divide: @Html.RadioButton("Ope", "4")
+            </p>
+
+
+            <input type="submit" name="cal" value="Calculate" />
+        </form>
+    </div>
+    <div class="row div col-lg-6">
+        <h1>The result is: @ViewBag.Res</h1>
+    </div>
+</div>
+
+
