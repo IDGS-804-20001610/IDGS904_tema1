@@ -1,0 +1,56 @@
+﻿@model IDGS904_tema1.Models.Alumnos
+
+@{
+    ViewBag.Title = "Registrar";
+}
+
+<h2>Registrar</h2>
+
+@using (Html.BeginForm())
+            {
+                <div class="form-horizontal">
+                    <div class="from-group">
+                        @Html.LabelFor(model => model.Nombre,
+                              htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Nombre,
+                                  new { htmlAtributes = new { @class = "form control" } })
+                        </div>
+                    </div>
+
+                    <div class="from-group">
+                        @Html.LabelFor(model => model.Edad,
+                              htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Edad,
+                                  new { htmlAtributes = new { @class = "form control" } })
+                        </div>
+                    </div>
+
+                    <div class="from-group">
+                        @Html.LabelFor(model => model.Activo,
+                              htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Activo,
+                                  new { htmlAtributes = new { @class = "form control" } })
+                        </div>
+                    </div>
+
+                    <div class="from-group">
+                        @Html.LabelFor(model => model.Inscrito,
+                              htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Inscrito,
+                                  new { htmlAtributes = new { @class = "form control" } })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <br />
+                        <input type="submit" name="" value="REGISTER" />
+                    </div>
+                </div>
+         }
+                

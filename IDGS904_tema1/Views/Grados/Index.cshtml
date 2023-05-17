@@ -1,0 +1,36 @@
+﻿@model IDGS904_tema1.Models.Grados
+
+@{
+    ViewBag.Title = "Degree Converter";
+}
+
+<h2><b>Degree Converter</b></h2>
+<br />
+
+@using (Html.BeginForm("Index2", "Grados", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <div class="from-group">
+            @Html.Label("Grado", "Type the degrees to be converted",
+                  htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Grado,
+                      new { htmlAtributes = new { @class = "form control" } })
+            </div>
+        </div>
+        <br />
+
+        <div class="from-group">
+            To degree Celsius:   @Html.RadioButtonFor(model => model.Tipo, "1")
+            <br />
+            To degree Fahrenheit:   @Html.RadioButtonFor(model => model.Tipo, "2")
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+            <br />
+                <input type="submit" name="" value="CALCULATE" class = "btn btn-outline-success" />
+            </div>
+        </div>
+    </div>
+}

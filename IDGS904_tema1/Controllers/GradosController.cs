@@ -1,26 +1,24 @@
 ﻿using IDGS904_tema1.Models;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
 namespace IDGS904_tema1.Controllers
 {
-    public class DistanciaController : Controller
+    public class GradosController : Controller
     {
-        // GET: Distancia
+        // GET: Grados
         public ActionResult Index()
         {
             return View();
         }
 
-        public RedirectToRouteResult Index2(Distancia d)
+        public RedirectToRouteResult Index2(Grados g)
         {
-
-            d.Res = d.Distance();
-            TempData["Res"] = d.Res;
+            g.Res = g.Conver();
+            TempData["Res"] = g.Res;
             return RedirectToAction("Index3");
         }
 
