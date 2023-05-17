@@ -1,4 +1,5 @@
-﻿
+﻿@model IDGS904_tema1.Models.Distancia
+
 @{
     ViewBag.Title = "Index";
 }
@@ -6,24 +7,23 @@
 <h2>Calculator</h2>
 <div class="container">
     <div class="row div col-lg-6">
-        <form action="/" method="POST">
-            <label for="x1">First Number:</label>
-            <input type="number" name="x1" value="" />
-            <br />
-            <label for="y1">Second Number:</label>
-            <input type="number" name="y1" value="" />
-            <br />
-            <label for="x2">First Number:</label>
-            <input type="number" name="x2" value="" />
-            <br />
-            <label for="y2">Second Number:</label>
-            <input type="number" name="y2" value="" />
+        <form action="/Distancia/Index2" method="POST">
+                <label>Type the coordinates to calculate the distance:</label><br /><br />
 
-            <input type="submit" name="cal" value="Calculate" />
-        </form>
-    </div>
-    <div class="row div col-lg-6">
-        <h1>The result is: @ViewBag.Res</h1>
-        @Html.ActionLink("Mi ruta", "Index", "Home", null, new { dato = "", @class = "btn btn-danger" })|
+                <label>X1:</label>
+                @Html.TextBoxFor(model => model.x1)
+                <br />
+                <label>Y1:</label>
+                @Html.TextBoxFor(model => model.y1)
+                <br />
+                <label>X2:</label>
+                @Html.TextBoxFor(model => model.x2)
+                <br />
+                <label>Y2:</label>
+                @Html.TextBoxFor(model => model.y2)
+                <br /><br />
+
+                <input type="submit" name="cal" value="Calculate" />
+            </form>
     </div>
 </div>

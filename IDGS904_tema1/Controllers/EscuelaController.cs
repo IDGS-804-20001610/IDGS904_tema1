@@ -32,7 +32,8 @@ namespace IDGS904_tema1.Controllers
 
         public RedirectToRouteResult Vista2()
         {
-            TempData["Nombre"] = "Brenda";
+            string nombre = "Brenda";
+            TempData["Nombre"] = nombre;
             return RedirectToAction("Index2");
         }
 

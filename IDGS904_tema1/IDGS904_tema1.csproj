@@ -194,6 +194,8 @@
     <Content Include="Views\Escuela\Vista2.cshtml" />
     <Content Include="Views\Escuela\Index2.cshtml" />
     <Content Include="Views\Distancia\Index.cshtml" />
+    <Content Include="Views\Distancia\Index3.cshtml" />
+    <Content Include="Views\Distancia\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
