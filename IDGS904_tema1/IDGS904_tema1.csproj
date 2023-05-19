@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArchivoController.cs" />
     <Compile Include="Controllers\DistanciaController.cs" />
     <Compile Include="Controllers\EscuelaController.cs" />
     <Compile Include="Controllers\GradosController.cs" />
@@ -132,9 +133,12 @@
     <Compile Include="Models\Alumnos.cs" />
     <Compile Include="Models\Distancia.cs" />
     <Compile Include="Models\Grados.cs" />
+    <Compile Include="Models\Maestros.cs" />
     <Compile Include="Models\OperasBas.cs" />
     <Compile Include="Models\Productos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GuardarService.cs" />
+    <Compile Include="Services\LeerService.cs" />
     <Compile Include="Services\ProductoService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +212,8 @@
     <Content Include="Views\Grados\Index.cshtml" />
     <Content Include="Views\Grados\Index2.cshtml" />
     <Content Include="Views\Grados\Index3.cshtml" />
+    <Content Include="Views\Archivo\Registrar.cshtml" />
+    <Content Include="Views\Archivo\LeerDatos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
