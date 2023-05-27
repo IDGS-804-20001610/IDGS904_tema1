@@ -29,7 +29,7 @@ namespace IDGS904_tema1.Controllers
         {
             var arch = new LeerService();
 
-            ViewBag.Archivo = arch;
+            ViewBag.Archivo = arch.LeerArchivo();
 
             return View();
         }

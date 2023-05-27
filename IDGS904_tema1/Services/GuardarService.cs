@@ -21,13 +21,13 @@ namespace IDGS904_tema1.Services
             var datos = nombre + ", " + apaterno + ", " + amaterno + ", " + edad + ", " + email + Environment.NewLine;
 
             //~ ayuda a identificar la carpeta que está dentro del proyecto
-            var aricho = HttpContext.Current.Server.MapPath("~/App_Data/datos.txt");
+            var archivo = HttpContext.Current.Server.MapPath("~/App_Data/datos.txt");
 
             //Si el archivo existe, se sobre escribe, sino existe, lo crea
             //File.WriteAllText(aricho, datos);
 
             // si el archivo no existe, lo crea, añade la cadena de texto
-            File.AppendAllText(aricho, datos);
+            File.AppendAllText(archivo, datos);
         }
     }
 }

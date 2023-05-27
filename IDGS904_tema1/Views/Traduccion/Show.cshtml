@@ -1,0 +1,32 @@
+﻿@model IDGS904_tema1.Models.Dictionary
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Show</h2>
+
+
+    <div>
+        <table class="table table-striped">
+            <thead>
+            <th>Spanish</th>
+            <th>English</th>
+            </thead>
+            @foreach (String tem in ViewBag.Dictio)
+            {
+                <tbody>
+                    @foreach (String item in tem.Split(','))
+                    {
+                        <tr>
+                            <td>@item</td>
+                        </tr>
+                    }
+                </tbody>
+            }
+            </table>
+    </div>
+
+    <p>
+        @Html.ActionLink("RETURN", "Save", "Traduccion", null, new { dato = "", @class = "btn btn-secondary" })
+    </p>

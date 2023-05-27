@@ -1,0 +1,40 @@
+﻿@model IDGS904_tema1.Models.Traduction
+
+@{
+    ViewBag.Title = "DICTIONARY";
+}
+
+<h2>DICTIONARY</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Traduction</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Word, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Word, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Word, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            To Spanish:   @Html.RadioButtonFor(model => model.Language, "1")
+            <br />
+            To English:   @Html.RadioButtonFor(model => model.Language, "2")
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="TRADUCE" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+    <h2>TRADUCCIÓN:  @ViewBag.Trad</h2>
+}
+
